@@ -7,25 +7,25 @@ const skills = [
   {
     icon: Code2,
     title: 'Frontend Development',
-    description: 'React, TypeScript, Next.js, Tailwind CSS',
+    description: 'React, Tailwind CSS, Bootstrap',
     color: 'text-primary'
   },
   {
     icon: Palette,
     title: 'UI/UX Design', 
-    description: 'Figma, Adobe XD, Responsive Design',
+    description: 'Figma, Canva',
     color: 'text-secondary'
   },
   {
     icon: Rocket,
     title: 'Backend Development',
-    description: 'Node.js, Python, PostgreSQL, MongoDB',
+    description: 'PHP, Python, PostgreSQL, MongoDB, Node.js',
     color: 'text-accent'
   },
   {
     icon: Users,
     title: 'Collaboration',
-    description: 'Agile, Git, Team Leadership, Mentoring',
+    description: 'Git',
     color: 'text-primary'
   }
 ];
@@ -62,9 +62,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg text-foreground-muted max-w-3xl mx-auto leading-relaxed"
           >
-            I'm a passionate full-stack developer with over 5 years of experience creating 
-            digital solutions that blend functionality with beautiful design. I love turning 
-            complex problems into simple, elegant solutions.
+            I'm a passionate full-stack developer who loves crafting clean, efficient, and user-friendly digital solutions. My focus is turning ideas into functional, elegant applications.
           </motion.p>
         </motion.div>
 
@@ -81,13 +79,13 @@ export function About() {
                 My Journey
               </h3>
               <p className="text-foreground-muted leading-relaxed mb-4">
-                Started as a curious student who fell in love with code, I've evolved into 
-                a seasoned developer who thrives on creating innovative solutions. My experience 
-                spans from startups to enterprise-level applications.
+                I started as a curious student and grew into a developer who enjoys solving 
+                problems with creative, practical solutions. I've worked on projects ranging 
+                from startups to enterprise systems.
               </p>
               <p className="text-foreground-muted leading-relaxed">
-                I believe in continuous learning and staying updated with the latest technologies 
-                while maintaining a strong foundation in fundamental programming principles.
+                Continuous learning is my principle—I keep up with modern tools while staying 
+                rooted in solid programming fundamentals.
               </p>
             </div>
 
@@ -101,9 +99,8 @@ export function About() {
                 When I'm not coding...
               </h4>
               <p className="text-foreground-muted text-sm leading-relaxed">
-                You'll find me exploring new technologies, contributing to open source projects, 
-                or enjoying outdoor adventures. I believe a balanced lifestyle fuels creativity 
-                and innovation.
+                Outside coding, I enjoy exploring new tech, contributing to open source, 
+                and outdoor activities that recharge creativity.
               </p>
             </motion.div>
           </motion.div>

@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:john@example.com', label: 'Email' }
+  { icon: Github, href: 'https://github.com/Bujanking1660', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/rizkya-gusnaldy-kalia/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:rizkyagusnaldykaliaa@gmail.com', label: 'Email' }
 ];
 
 export function Footer() {
@@ -25,10 +25,10 @@ export function Footer() {
             className="flex items-center space-x-2"
           >
             <span className="text-xl font-poppins font-bold gradient-text">
-              John Doe
+              Rizkya Gusnaldy
             </span>
             <span className="text-foreground-muted">•</span>
-            <span className="text-foreground-muted">Full Stack Developer</span>
+            <span className="text-foreground-muted">Junior Web Developer</span>
           </motion.div>
 
           {/* Social Links */}
@@ -42,6 +42,8 @@ export function Footer() {
               <motion.a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 glass rounded-lg hover-lift transition-colors hover:bg-surface group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -63,9 +65,9 @@ export function Footer() {
           className="mt-8 pt-6 border-t border-glass-border/30 text-center"
         >
           <p className="text-foreground-muted text-sm flex items-center justify-center space-x-1">
-            <span>© {currentYear} John Doe. Made with</span>
+            <span>© {currentYear} Rizkya Gusnaldy. Built with passion,</span>
             <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-            <span>and lots of coffee.</span>
+            <span>and continuous learning.</span>
           </p>
         </motion.div>
       </div>

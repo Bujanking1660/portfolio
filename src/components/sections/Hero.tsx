@@ -20,29 +20,14 @@ export function Hero() {
       {/* Parallax Background Shapes */}
       <motion.div 
         className="absolute top-20 left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
-        animate={{ 
-          y: [0, -30, 0],
-          scale: [1, 1.1, 1]
-        }}
-        transition={{ 
-          duration: 8, 
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
+        animate={{ y: [0, -30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       
       <motion.div 
         className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
-        animate={{ 
-          y: [0, 30, 0],
-          scale: [1, 0.9, 1]
-        }}
-        transition={{ 
-          duration: 10, 
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
+        animate={{ y: [0, 30, 0], scale: [1, 0.9, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
 
       {/* 3D Element */}
@@ -77,7 +62,7 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="text-5xl md:text-7xl font-poppins font-bold gradient-text"
           >
-            John Doe
+            Rizkya Gusnaldy Kalia
           </motion.h1>
 
           {/* Title */}
@@ -87,7 +72,7 @@ export function Hero() {
             transition={{ delay: 0.6 }}
             className="text-2xl md:text-4xl font-poppins font-medium text-foreground-muted"
           >
-            Full Stack Developer
+            Junior Web Developer & Informatics Student
           </motion.h2>
 
           {/* Description */}
@@ -97,8 +82,7 @@ export function Hero() {
             transition={{ delay: 0.8 }}
             className="max-w-2xl mx-auto text-lg text-foreground-subtle leading-relaxed"
           >
-            I create exceptional digital experiences through clean code and innovative design. 
-            Passionate about building scalable web applications that make a difference.
+            Informatics undergraduate with a Software Engineering (RPL) background. Skilled in <strong>HTML, CSS, JavaScript, PHP, MySQL, TailwindCSS, and Bootstrap</strong>, with additional experience in React Native, MongoDB, Python, and Java.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -112,7 +96,7 @@ export function Hero() {
               onClick={() => scrollToSection('#projects')}
               className="glass hover-lift bg-gradient-primary text-primary-foreground px-8 py-3 text-lg font-medium"
             >
-              View My Work
+              See My Projects
             </Button>
             
             <Button
@@ -120,7 +104,7 @@ export function Hero() {
               variant="outline"
               className="glass border-glass-border hover:bg-surface px-8 py-3 text-lg font-medium"
             >
-              Get In Touch
+              Contact Me
             </Button>
           </motion.div>
 
@@ -132,13 +116,15 @@ export function Hero() {
             className="flex justify-center space-x-6 pt-8"
           >
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:john@example.com', label: 'Email' }
+              { icon: Github, href: 'https://github.com/Bujanking1660', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/rizkya-gusnaldy-kalia/', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:rizkyagusnaldykaliaa@gmail.com', label: 'Email' }
             ].map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="p-3 glass rounded-full hover-lift transition-colors hover:bg-surface"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

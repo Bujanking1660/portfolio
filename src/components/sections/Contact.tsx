@@ -10,20 +10,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'john.doe@example.com',
-    href: 'mailto:john.doe@example.com'
+    value: 'rizkyagusnaldykaliaa.com',
+    href: 'mailto:rizkyagusnaldykaliaa.com'
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567'
+    value: '+62 857-9342-0144',
+    href: 'tel:6285793420144'
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'San Francisco, CA',
-    href: '#'
+    value: 'Bandung, Indonesia',
+    href: 'https://maps.google.com/?q=Bandung,Indonesia'
   }
 ];
 
