@@ -16,23 +16,16 @@ This project was created with the assistance of **AI tools** — combining **Cha
 ---
 
 ## 📂 Project Structure
-
-├── public/ # Static assets
-
-├── src/ # Application source code
-
-│ ├── components/ # Reusable UI components
-
-│ ├── pages/ # Page-level components
-
-│ └── styles/ # Global styles
-
-├── index.html # Entry HTML
-
-├── package.json # Project dependencies
-
+```text
+├── public/
+├── src/ 
+│ ├── components/ 
+│ ├── pages/ 
+│ └── styles/ 
+├── index.html 
+├── package.json
 └── tailwind.config.ts
-
+```
 ---
 
 ## 🚀 Getting Started
@@ -53,17 +46,13 @@ npm run build
 <img width="1895" height="870" alt="Screenshot 2025-08-22 204753" src="https://github.com/user-attachments/assets/60e46a05-8bbc-4cb8-bafc-947f844ca1af" />
 
 📌 Tech Stack
-
+```text
 React
-
 TypeScript
-
 Tailwind CSS
-
 shadcn/ui
-
 Vite
-
+```
 ---
 
 🤝 Acknowledgements
