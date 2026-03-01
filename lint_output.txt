@@ -1,0 +1,71 @@
+
+> portfolio@0.0.0 lint
+> eslint .
+
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ThemeProvider.jsx
+  48:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\sections\Hero.jsx
+  7:7  error  Parsing error: Identifier 'name' has already been declared
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Animations.jsx
+   15:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  129:7   error  'Tag' is assigned a value but never used                                                                                        no-unused-vars
+  238:3   error  'strength' is assigned a value but never used                                                                                   no-unused-vars
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Background3D.jsx
+  55:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  53 |   const positions = new Float32Array(count * 3);
+  54 |   for (let i = 0; i < count; i++) {
+> 55 |     positions[i * 3] = (Math.random() - 0.5) * 20;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  56 |     positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
+  57 |     positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+  58 |   }  react-hooks/purity
+  56:29  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  54 |   for (let i = 0; i < count; i++) {
+  55 |     positions[i * 3] = (Math.random() - 0.5) * 20;
+> 56 |     positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
+     |                             ^^^^^^^^^^^^^ Cannot call impure function
+  57 |     positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+  58 |   }
+  59 |                                               react-hooks/purity
+  57:29  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  55 |     positions[i * 3] = (Math.random() - 0.5) * 20;
+  56 |     positions[i * 3 + 1] = (Math.random() - 0.5) * 20;
+> 57 |     positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+     |                             ^^^^^^^^^^^^^ Cannot call impure function
+  58 |   }
+  59 |
+  60 |   useFrame((state) => {                                                           react-hooks/purity
+  60:13  error  'state' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\PageIntro.jsx
+  17:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  15 |     if (alreadySeen) {
+  16 |       onComplete();
+> 17 |       setMounted(false);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |       return;
+  19 |     }
+  20 |  react-hooks/set-state-in-effect
+
+✖ 10 problems (10 errors, 0 warnings)
+

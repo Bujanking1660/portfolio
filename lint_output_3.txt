@@ -1,0 +1,14 @@
+
+> portfolio@0.0.0 lint
+> eslint .
+
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Animations.jsx
+    1:10  error  'useRef' is defined but never used. Allowed unused vars must match /^([A-Z_]|motion)/u  no-unused-vars
+  119:7   error  'TagComponent' is assigned a value but never used                                       no-unused-vars
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Background3D.jsx
+  1:18  error  'useMemo' is defined but never used. Allowed unused vars must match /^([A-Z_]|motion)/u  no-unused-vars
+
+✖ 3 problems (3 errors, 0 warnings)
+
