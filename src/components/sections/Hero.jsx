@@ -4,51 +4,13 @@ import { ArrowRight, Github } from "lucide-react";
 
 const name = "Rizkya Gusnaldy Kalia";
 
-// GPU-friendly floating orb — uses transform only, no layout paint
-const FloatingOrb = ({ className, delay = 0 }) => (
-  <motion.div
-    className={className}
-    animate={{ y: [0, -24, 0] }}
-    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay }}
-  />
-);
-
 export function Hero() {
   const letters = name.split("");
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-      {/* Floating background orbs — slightly offset from content for depth */}
-      <motion.div
-        className="absolute inset-0 -z-10 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.4 }}
-      >
-        <FloatingOrb
-          className="absolute top-1/4 left-[10%] w-80 h-80 bg-blue-500/10 dark:bg-blue-400/8 rounded-full blur-3xl"
-          delay={0}
-        />
-        <FloatingOrb
-          className="absolute bottom-1/4 right-[10%] w-96 h-96 bg-violet-500/10 dark:bg-violet-400/8 rounded-full blur-3xl"
-          delay={2}
-        />
-        <FloatingOrb
-          className="absolute top-1/2 left-1/2 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"
-          delay={4}
-        />
-      </motion.div>
-
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
         <StaggerContainer className="flex flex-col items-center gap-6 max-w-5xl">
-          {/* Status badge */}
-          <StaggerItem>
-            <div className="inline-flex items-center rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse" />
-              Available for new opportunities
-            </div>
-          </StaggerItem>
-
           {/* Name — letter-by-letter 3D reveal */}
           <StaggerItem>
             <motion.div

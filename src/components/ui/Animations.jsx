@@ -1,22 +1,12 @@
-import { useRef } from "react";
+import { useEffect } from "react";
 import {
   motion,
-  useInView,
   useMotionValue,
   useTransform,
   useSpring,
   animate,
 } from "framer-motion";
-import { useEffect } from "react";
-
-/* ─────────────────────────────────────────────
-   Core viewport hook — shared by all components
-───────────────────────────────────────────── */
-export function useScrollReveal(options = {}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px", ...options });
-  return { ref, isInView };
-}
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 /* ─────────────────────────────────────────────
    FadeIn — classic fade + rise on scroll
@@ -126,13 +116,13 @@ export const RevealText = ({
   children,
   className = "",
   delay = 0,
-  as: Tag = "h2",
+  as: Component = "h2", // eslint-disable-line no-unused-vars
 }) => {
   const { ref, isInView } = useScrollReveal({ margin: "-60px" });
   const words = String(children).split(" ");
 
   return (
-    <Tag ref={ref} className={className} style={{ overflow: "hidden" }}>
+    <Component ref={ref} className={className} style={{ overflow: "hidden" }}>
       {words.map((word, i) => (
         <span
           key={i}
@@ -156,7 +146,7 @@ export const RevealText = ({
           </motion.span>
         </span>
       ))}
-    </Tag>
+    </Component>
   );
 };
 
@@ -233,11 +223,7 @@ export const CountUp = ({
 /* ─────────────────────────────────────────────
    ParallaxSection — scroll-linked vertical offset
 ───────────────────────────────────────────── */
-export const ParallaxSection = ({
-  children,
-  strength = 40,
-  className = "",
-}) => {
+export const ParallaxSection = ({ children, className = "" }) => {
   return (
     <div className={className} style={{ position: "relative" }}>
       {children}

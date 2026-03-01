@@ -7,6 +7,8 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Experience } from "./components/sections/Experience";
 import { PageIntro } from "./components/ui/PageIntro";
+import { Scene } from "./components/ui/Scene";
+import { SoundManager } from "./components/ui/SoundManager";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
       <div className="min-h-screen flex flex-col">
+        <Scene />
         {/* Cinematic intro — manages its own lifecycle */}
         <PageIntro onComplete={() => setIntroComplete(true)} />
 
@@ -39,6 +42,7 @@ function App() {
           )}
         </AnimatePresence>
       </div>
+      <SoundManager />
     </ThemeProvider>
   );
 }

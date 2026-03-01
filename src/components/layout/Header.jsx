@@ -1,5 +1,5 @@
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "../ThemeProvider";
+import { useTheme } from "../../hooks/useTheme";
 
 export function Header() {
   const { theme, setTheme } = useTheme();

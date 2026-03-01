@@ -1,0 +1,49 @@
+
+> portfolio@0.0.0 lint
+> eslint .
+
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ThemeProvider.jsx
+  1:25  error  'useContext' is defined but never used. Allowed unused vars must match /^([A-Z_]|motion)/u                  no-unused-vars
+  3:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file  react-refresh/only-export-components
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Animations.jsx
+  149:5  error  Parsing error: Expected corresponding JSX closing tag for <TagComponent>
+
+C:\syntax\_javascript\_react\antigravity_portfolio\portfolio\src\components\ui\Background3D.jsx
+  56:21  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  54 |     const pos = new Float32Array(count * 3);
+  55 |     for (let i = 0; i < count; i++) {
+> 56 |       pos[i * 3] = (Math.random() - 0.5) * 20;
+     |                     ^^^^^^^^^^^^^ Cannot call impure function
+  57 |       pos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+  58 |       pos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+  59 |     }  react-hooks/purity
+  57:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  55 |     for (let i = 0; i < count; i++) {
+  56 |       pos[i * 3] = (Math.random() - 0.5) * 20;
+> 57 |       pos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  58 |       pos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+  59 |     }
+  60 |     return pos;                           react-hooks/purity
+  58:25  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  56 |       pos[i * 3] = (Math.random() - 0.5) * 20;
+  57 |       pos[i * 3 + 1] = (Math.random() - 0.5) * 20;
+> 58 |       pos[i * 3 + 2] = (Math.random() - 0.5) * 10;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  59 |     }
+  60 |     return pos;
+  61 |   }, [count]);                                                  react-hooks/purity
+
+✖ 6 problems (6 errors, 0 warnings)
+

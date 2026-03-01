@@ -14,8 +14,9 @@ export function PageIntro({ onComplete }) {
   useEffect(() => {
     if (alreadySeen) {
       onComplete();
-      setMounted(false);
-      return;
+      // Use setTimeout to avoid synchronous state update in effect
+      const t = setTimeout(() => setMounted(false), 0);
+      return () => clearTimeout(t);
     }
 
     // Phase timeline

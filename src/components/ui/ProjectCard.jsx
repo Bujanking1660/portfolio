@@ -15,9 +15,8 @@ export function ProjectCard({ project, indexStr }) {
           href={project.html_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="group block h-full rounded-2xl border border-border/50 bg-card p-6 relative overflow-hidden"
-          whileHover={{ borderColor: "var(--border)" }}
-          transition={{ duration: 0.2 }}
+          className="group block h-full rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md p-6 relative overflow-hidden shadow-sm hover:shadow-md hover:border-border transition-all duration-300"
+          whileHover={{ y: -4 }}
         >
           {/* Gradient shimmer on hover */}
           <motion.div
@@ -29,19 +28,19 @@ export function ProjectCard({ project, indexStr }) {
 
           <div className="flex flex-col h-full relative z-10">
             <div className="flex justify-between items-start mb-4">
-              <h3 className="font-semibold text-lg tracking-tight group-hover:text-primary transition-colors">
+              <h3 className="font-bold text-lg tracking-tight group-hover:text-primary transition-colors text-card-foreground">
                 {project.name}
               </h3>
               <motion.div
                 initial={{ opacity: 0, x: -6 }}
                 whileHover={{ opacity: 1, x: 0 }}
-                className="text-muted-foreground"
+                className="text-muted-foreground/80 group-hover:text-primary transition-colors"
               >
                 <ExternalLink className="h-4 w-4" />
               </motion.div>
             </div>
 
-            <p className="text-muted-foreground text-sm flex-grow mb-6 line-clamp-3">
+            <p className="text-muted-foreground leading-relaxed text-sm flex-grow mb-6 line-clamp-3">
               {project.description || "No description provided."}
             </p>
 
@@ -51,7 +50,7 @@ export function ProjectCard({ project, indexStr }) {
                   {project.topics.slice(0, 3).map((topic) => (
                     <span
                       key={topic}
-                      className="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-border"
+                      className="inline-flex items-center rounded-md bg-muted/80 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-foreground border border-border/50"
                     >
                       {topic}
                     </span>
