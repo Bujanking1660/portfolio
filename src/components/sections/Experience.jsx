@@ -11,30 +11,12 @@ export function Experience() {
   const experiences = [
     {
       id: 1,
-      role: "Senior Web Developer",
+      role: "Junior Web Developer",
       company: "Digital Agency",
-      period: "2023 - Present",
+      period: "Jul 2023 - Dec 2023",
       description:
-        "Leading a team of developers in building high-performance, accessible, and scalable web applications using React and Next.js.",
+        "Saat ini, saya sedang merancang wireframe situs web pendidikan sambil mendalami pengembangan frontend menggunakan React dan Next.js untuk menciptakan performa yang optimal. Di sisi kreatif, saya juga aktif mengeksplorasi desain grafis dengan membuat desain kaos melalui template Figma, guna memperluas kemampuan visual dan tata letak saya.",
       icon: <Code2 className="h-6 w-6 text-primary" />,
-    },
-    {
-      id: 2,
-      role: "Frontend Engineer",
-      company: "Tech Startup Inc.",
-      period: "2020 - 2023",
-      description:
-        "Developed and maintained complex user interfaces, focusing on performance optimization and component reusability.",
-      icon: <Terminal className="h-6 w-6 text-primary" />,
-    },
-    {
-      id: 3,
-      role: "UI/UX Designer & Dev",
-      company: "Creative Studio",
-      period: "2018 - 2020",
-      description:
-        "Bridged the gap between design and engineering, creating interactive prototypes and implementing them in production.",
-      icon: <PenTool className="h-6 w-6 text-primary" />,
     },
   ];
 
