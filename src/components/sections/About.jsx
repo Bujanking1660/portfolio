@@ -45,14 +45,20 @@ export function About() {
             <SlideUp delay={0.15}>
               <div className="space-y-4 text-muted-foreground leading-relaxed text-lg max-w-lg">
                 <p>
-                  I am a frontend developer with a deep love for clean code and
-                  beautiful interfaces. I obsess over the details — from
-                  micro-animations to load-time performance.
+                  Saya adalah mahasiswa Teknik Informatika di UNIKOM yang
+                  berfokus pada
+                  <strong> Software Development</strong> dan{" "}
+                  <strong>UI/UX Design</strong>. Saya terbiasa bekerja mandiri
+                  dengan ketelitian tinggi, namun tetap diandalkan dalam
+                  kolaborasi tim untuk menciptakan solusi digital yang solid.
                 </p>
                 <p>
-                  When I am not coding, I am exploring the latest in design
-                  systems, contributing to open-source, and pushing the
-                  boundaries of what is possible in the browser.
+                  Selain coding, saya mengeksplorasi{" "}
+                  <strong>Data Science</strong> untuk memahami pengolahan
+                  informasi secara mendalam. Bagi saya, menjadi developer bukan
+                  hanya soal menulis kode, tapi juga tentang mengasah komunikasi
+                  dan <em>public speaking</em>
+                  agar ide teknis dapat tersampaikan dengan efektif.
                 </p>
               </div>
             </SlideUp>
